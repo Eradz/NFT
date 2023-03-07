@@ -1,0 +1,30 @@
+.contain{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #EAECF0;
+    padding: 32px 0;
+}
+.zuri{
+    display: flex;
+    align-items: baseline;
+    gap:4px;
+}
+.dot{
+    width: 8px;
+    height: 8px;
+    background: red;
+    border-radius: 50%;
+}
+.hng{
+    color: #667085;
+    font-size: 16px;
+}
+.zuri-img{
+    width: 132px;
+    height: 32px;
+}
+@media screen and (max-width: 900px) {
+    .contain{
+       flex-direction: column;
+    }
+}

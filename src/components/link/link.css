@@ -1,0 +1,125 @@
+
+#btn_zuri, #books, #book_python, #pitch, #book_design, .twitter{
+    text-align: center;
+    background: #EAECF0;
+    padding: 24px 32px;
+    text-decoration: none;
+    color: #101828;
+    font-weight: 600;
+    border-radius: 8px;
+}
+.twitter{
+    font-weight: 500;
+}
+
+.twitter p:hover{
+    text-decoration: underline;
+    text-decoration-color:  #7A5AF8;
+    text-decoration-thickness: 2px;
+}
+#books:hover{
+    border: 1px solid #7A5AF8;
+    background: #D0D5DD;
+}
+#book_python:hover{
+    border: 1px solid #7A5AF8;
+    background: #D0D5DD;
+}
+#pitch:hover{
+    border: 1px solid #7A5AF8;
+    background: #D0D5DD;
+}
+#book_design:hover{
+    border: 1px solid #7A5AF8;
+    background: #D0D5DD;
+}
+ .twitter:hover{
+    border: 1px solid #7A5AF8;
+    background: #D0D5DD;
+}
+#btn_zuri:hover{
+    border: 1px solid #7A5AF8;
+    background: #D0D5DD;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap: 24px;
+}
+.image{
+    width: 24px;
+    cursor: pointer;
+    height: 24px;
+}
+.img-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    padding: 24px;
+}
+.share{
+   display: none;
+}
+
+@media screen and (max-width: 900px) {
+    .links{
+        font-size: 14px;
+    }
+    #books:focus{
+        border: 1px solid #7A5AF8;
+        background: #D0D5DD;
+    }
+    #book_python:focus{
+        border: 1px solid #7A5AF8;
+        background: #D0D5DD;
+    }
+    #pitch:focus{
+        border: 1px solid #7A5AF8;
+        background: #D0D5DD;
+    }
+    #book_design:focus{
+        border: 1px solid #7A5AF8;
+        background: #D0D5DD;
+    }
+     .twitter:focus{
+        border: 1px solid #7A5AF8;
+        background: #D0D5DD;
+    }
+    #btn_zuri:focus{
+        border: 1px solid #7A5AF8;
+        background: #D0D5DD;
+    }
+    .slide{
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30%;
+    }
+    .share{
+        font-size: 20px;
+        transform: scaleX(-1);
+        padding: 12.5px;
+        border-radius: 50%;
+        border: 1px solid #98A2B3 ;
+        background: #D0D5DD;
+        color: #667085;
+        cursor: pointer;
+        display: flex;
+    }
+    #btn_zuri, #books, #book_python, #pitch, #book_design, .twitter{
+        display: flex;
+        justify-content: space-between;
+        padding: 0px;
+    }
+    p{
+        width: 65%;
+        margin: 37px 24px;
+    }
+
+    
+    
+}
