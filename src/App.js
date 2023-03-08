@@ -1,15 +1,16 @@
-import {Home} from './components/homepage/Home'
-import './App.css'
-import { Link } from './components/link/Link';
-import { Footer } from './components/footer/Footer';
+import Card from "./components/card/Card";
+import Nav from "./components/nav/Nav";
+import Sidebar from "./components/sidebar/Sidebar";
 
 function App() {
   return (
-    <div className='app'>
-    <Home/>
-    <Link/>
-    <Footer/>
+    <div className="flex">
+    <Sidebar/>
+    <div className="w-[100%] p-3">
+    <Nav/>
+    <Card/>
     </div>
+     </div>
   );
 }
 
