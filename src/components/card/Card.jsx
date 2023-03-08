@@ -1,23 +1,24 @@
 import { useEffect, useState } from "react";
 import React from 'react'
+import Modal from "./Modal";
 
 const Card = () => {
     const [nfts, setNfts] = useState([])
     useEffect(()=>{
+      if(nfts === []){
+        return <h2>loading.....</h2>
+      }
         const options = {
             method: 'GET',
-            headers: {accept: 'application/json', 'X-API-KEY': '5Xp7wWPUmweBP52331i4kX7ZM6KN3IF7'}
+            headers: {accept: 'application/json', 'X-API-KEY': process.env.REACT_APP_API_KEY}
           };
           
           fetch('https://api.blockspan.com/v1/exchanges/collections?chain=eth-main&exchange=opensea&page_size=25', options)
             .then(response => response.json())
             .then(response => setNfts(response.results))
             .catch(err => console.error(err))
-            .finally(()=>{
-              return <h1>loading</h1>
-            })
-
-    }, [])
+          }, [nfts])
+   
     console.log(nfts)
   return (
     <div className="flex flex-col pt-10">
@@ -41,6 +42,7 @@ const Card = () => {
           })}
          
         </div>
+        <Modal/>
     </div>
   )
 }
