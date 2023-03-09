@@ -38,8 +38,8 @@ const Card = () => {
         <div className="pt-5 grid md:grid-cols-3 lg:grid-cols-5 grid-cols-2 gap-5 pl-5 mx-auto">
           {nfts.map((nft)=>{
             return (
-          <div onClick={()=>{modal(nft.key)}} key={nft.key} className="hover:cursor-pointer relative w-[180px]  h-[180px] md:w-[200px] md:h-[200px] shadow-xl">
-            <img className="w-[150px]  h-[150px] md:w-[200px] md:h-[200px]" src={nft.image_url} alt={nft.name}/>
+          <div onClick={()=>{modal(nft.key)}} key={nft.key} className="hover:cursor-pointer relative w-[180px]  h-[180px] md:w-[200px] md:h-[180px] shadow-xl">
+            <img className="w-[180px]  h-[150px] md:w-[200px] md:h-[200px]" src={nft.image_url} alt={nft.name}/>
             <p className="absolute bottom-2 left-[10px] ">{nft.name.length > 20? `${nft.name.slice(0,13)}...`:nft.name }</p>
           </div>
             )
