@@ -10,15 +10,6 @@ const Card = () => {
     const [show, setShow] = useState(false)
     const [id, setId] = useState('')
     useEffect(()=>{
-        // const options = {
-        //     method: 'GET',
-        //     headers: {accept: 'application/json', 'X-API-KEY': process.env.REACT_APP_API_KEY}
-        //   };
-          
-        //   fetch('https://api.blockspan.com/v1/exchanges/collections?chain=eth-main&exchange=opensea&page_size=25', options)
-        //     .then(response => response.json())
-        //     .then(response => setNfts(response.results))
-        //     .catch(err => console.error(err))
         setNfts(data)
     }, [])
 
@@ -31,7 +22,7 @@ const Card = () => {
     const toogleOff = () =>{
       setShow(false)
     }
-   const one = nft[0][0]
+   
     
   return (
     <>
@@ -44,13 +35,12 @@ const Card = () => {
           </div>
           <p>Solana</p>
         </div>
-        <p >Project you'll love</p>
-        <div className="pt-5 grid md:grid-cols-3 lg:grid-cols-4 grid-cols-2 gap-5 pl-5">
+        <div className="pt-5 grid md:grid-cols-3 lg:grid-cols-5 grid-cols-2 gap-5 pl-5 mx-auto">
           {nfts.map((nft)=>{
             return (
-          <div onClick={()=>{modal(nft.key)}} key={nft.key} className="hover:cursor-pointer relative w-[200px] h-[200px] ">
-            <img src={nft.image_url} alt={nft.name}/>
-            <p className="absolute bottom-2 left-[10px] ">{nft.name}</p>
+          <div onClick={()=>{modal(nft.key)}} key={nft.key} className="hover:cursor-pointer relative w-[180px]  h-[180px] md:w-[200px] md:h-[200px] shadow-xl">
+            <img className="w-[150px]  h-[150px] md:w-[200px] md:h-[200px]" src={nft.image_url} alt={nft.name}/>
+            <p className="absolute bottom-2 left-[10px] ">{nft.name.length > 20? `${nft.name.slice(0,13)}...`:nft.name }</p>
           </div>
             )
           })}
